@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LED Screen Calculator</string>
+    <string name="led_screen_string">LED SCREEN</string>
+    <string name="todo">TODO</string>
+    <string name="calculator_string">Calculator</string>
+    <string name="version_string">Version 1.0</string>
+    <string name="start_button_string">Start</string>
+    <string name="copy_tgs_group_string">©2019 TGS Group</string>
+    <string name="developed_by_tgs_group_string">Developed by TGS Group</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_wait_string">Please Wait...</string>
+    <string name="about_string">About</string>
+    <string name="todo3">TODO</string>
+    <string name="app_review_string"><u>App Review</u></string>
+    <string name = "content_text_view_string">Application is provide Calculate to screen dimension Width and Height, Screen Module point location in Width, Height and number of panels and number of Power Supplies. </string>
+</resources>

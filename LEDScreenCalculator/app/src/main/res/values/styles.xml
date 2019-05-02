@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/yellowColor</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+<style name="textField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+    <style name="header">
+        <item name="android:fontFamily">@font/font</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/greyColor</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="subHeader">
+        <item name="android:fontFamily">@font/font</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+</resources>
