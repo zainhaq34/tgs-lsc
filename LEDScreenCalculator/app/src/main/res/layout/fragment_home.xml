@@ -9,6 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+       <!--Company Details-->
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="0dp"
@@ -34,7 +36,9 @@
             <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/name_TextInputLayout">
+                    android:id="@+id/name_TextInputLayout"
+                    android:layout_marginBottom="4dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/name_TextInputEditText"
@@ -46,7 +50,9 @@
             <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/address_TextInputLayout">
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/address_TextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/address_TextInputEditText"
@@ -56,14 +62,20 @@
                         android:focusable="false"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-        <ImageView android:layout_width="0dp" android:layout_height="wrap_content"
-                   android:src="@drawable/line_grey" android:id="@+id/imageView2"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintVertical_bias="0.0"
-                   app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                   android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout_product"
-                   android:layout_marginTop="16dp"/>
+
+        <!--Divider-->
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line_grey" android:id="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout_product"
+                android:layout_marginTop="16dp"/>
+
+        <!--Module details-->
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="0dp"
@@ -89,6 +101,75 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/textView_product_info"
                     android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/module_TextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/module_TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_string"
+                        android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    android:text="@string/product_info_size_string"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView_product_info_size"
+                    android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:weightSum="5.0">
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/module_width_TextInputLayout"
+                        android:layout_weight="2.0"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/module_width_TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/module_width_string"
+                            android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:text="X"
+                          android:gravity="center"
+                          android:fontFamily="@font/font"
+                          android:textSize="29sp"
+                          android:layout_gravity="center"
+                          android:textStyle="bold"/>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/module_height_TextInputLayout"
+                        android:layout_weight="2.0"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/module_height_TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/module_height_string"
+                            android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
         </LinearLayout>
+
+        <!---->
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

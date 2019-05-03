@@ -18,7 +18,10 @@
     <string name="name_string">Name</string>
     <string name="address_string">Address</string>
     <string name="company_text_string">Company</string>
-    <string name="enter_company_information_string">Enter company information</string>
-    <string name="product_info_string">Enter Module Name and Size</string>
+    <string name="enter_company_information_string">Enter company Information.</string>
+    <string name="product_info_string">Enter Module Information</string>
     <string name="module_string">Module</string>
+    <string name="product_info_size_string">Enter Width and Height Dimension in Millimeter.</string>
+    <string name="module_width_string">Width</string>
+    <string name="module_height_string">Height</string>
 </resources>
