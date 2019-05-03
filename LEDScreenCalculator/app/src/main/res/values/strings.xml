@@ -24,4 +24,6 @@
     <string name="product_info_size_string">Enter Width and Height Dimension in Millimeter.</string>
     <string name="module_width_string">Width</string>
     <string name="module_height_string">Height</string>
+    <string name="location_info_string">Enter Width and Height Dimension in Feet.</string>
+    <string name="location_area_string">Location Area</string>
 </resources>

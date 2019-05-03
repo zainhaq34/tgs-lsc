@@ -32,7 +32,10 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/greyColor</item>
     </style>
-
+<style name="editTextField">
+    <item name="android:textSize">14sp</item>
+    <item name="android:singleLine">true</item>
+</style>
 
 
 </resources>

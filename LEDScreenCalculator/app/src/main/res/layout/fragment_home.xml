@@ -1,175 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".Fragments.HomeFragment" android:id="@+id/frameLayout">
 
-    <!--Androidx Constraint Layout-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:scrollbarStyle="outsideInset"
+        tools:context=".Fragments.HomeFragment">
+    <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/frameLayout">
 
-       <!--Company Details-->
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/linearLayout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
-            <TextView
-                    android:text="@string/company_text_string"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView_company"
-                    style="@style/header"/>
+        <!--Androidx Constraint Layout-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                    android:text="@string/enter_company_information_string"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView_company_info"
-                    android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
-            <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/name_TextInputLayout"
-                    android:layout_marginBottom="4dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name_TextInputEditText"
+            <!--Company Details-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+                <TextView
+                        android:text="@string/company_text_string"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/name_string"
-                        android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:id="@+id/address_TextInputLayout"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        android:layout_height="wrap_content" android:id="@+id/textView_company"
+                        style="@style/header"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/address_TextInputEditText"
+                <TextView
+                        android:text="@string/enter_company_information_string"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/address_string"
-                        android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <!--Divider-->
-        <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/line_grey" android:id="@+id/imageView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout_product"
-                android:layout_marginTop="16dp"/>
-
-        <!--Module details-->
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/linearLayout_product"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                app:layout_constraintVertical_bias="0.0" android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp">
-            <TextView
-                    android:text="@string/module_string"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView_product"
-                    style="@style/header"/>
-
-            <TextView
-                    android:text="@string/product_info_string"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView_product_info"
-                    android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
-            <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/module_TextInputLayout"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/module_TextInputEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/name_string"
-                        android:focusable="false"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                    android:text="@string/product_info_size_string"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView_product_info_size"
-                    android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                          android:orientation="horizontal"
-                          android:weightSum="5.0">
+                        android:layout_height="wrap_content" android:id="@+id/textView_company_info"
+                        android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
                 <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/module_width_TextInputLayout"
-                        android:layout_weight="2.0"
+                        android:id="@+id/name_TextInputLayout"
+                        android:layout_marginBottom="4dp"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/module_width_TextInputEditText"
+                            android:id="@+id/name_TextInputEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/module_width_string"
-                            android:focusable="false"/>
+                            android:hint="@string/name_string"
+                            style="@style/editTextField"
+                            android:nextFocusDown="@+id/address_TextInputEditText"/>
                 </com.google.android.material.textfield.TextInputLayout>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                          android:layout_weight="1"
-                          android:text="X"
-                          android:gravity="center"
-                          android:fontFamily="@font/font"
-                          android:textSize="29sp"
-                          android:layout_gravity="center"
-                         />
                 <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/module_height_TextInputLayout"
-                        android:layout_weight="2.0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/address_TextInputLayout"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                     <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/module_height_TextInputEditText"
+                            android:id="@+id/address_TextInputEditText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/module_height_string"
-                            android:focusable="false"/>
+                            android:hint="@string/address_string"
+                            style="@style/editTextField" android:nextFocusDown="@+id/module_TextInputEditText"/>
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
-        </LinearLayout>
+            <!--Divider-->
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_grey" android:id="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout_product"/>
 
-        <!--Location Details-->
+            <!--Module details-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/linearLayout_product"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintVertical_bias="0.0" android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+                <TextView
+                        android:text="@string/module_string"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_product"
+                        style="@style/header"/>
+
+                <TextView
+                        android:text="@string/product_info_string"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_product_info"
+                        android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/module_TextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/module_TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/name_string"
+                            style="@style/editTextField" android:nextFocusDown="@+id/module_width_TextInputEditText"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                        android:text="@string/product_info_size_string"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_product_info_size"
+                        android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:weightSum="5.0">
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/module_width_TextInputLayout"
+                            android:layout_weight="2.0"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/module_width_TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/module_width_string"
+                                android:inputType="numberDecimal"
+                                style="@style/editTextField"
+                                android:nextFocusDown="@+id/module_height_TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:text="X"
+                              android:gravity="center"
+                              android:fontFamily="@font/font"
+                              android:textSize="20sp"
+                              android:layout_gravity="center"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/module_height_TextInputLayout"
+                            android:layout_weight="2.0"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/module_height_TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/module_height_string"
+                                android:inputType="numberDecimal"
+                                style="@style/editTextField"
+                                android:nextFocusDown="@+id/location_width_TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--Divider-->
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_grey" android:id="@+id/imageView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout_product"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"/>
+            <!--Location Details-->
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" android:id="@+id/linearLayout3">
+                <TextView
+                        android:text="@string/location_area_string"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_location"
+                        style="@style/header"/>
+                <TextView
+                        android:text="@string/location_info_string"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_location_info"
+                        android:textColor="@color/colorPrimaryDark" style="@style/smallTextField"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:weightSum="5.0">
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/location_width_TextInputLayout"
+                            android:layout_weight="2.0"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/location_width_TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/module_width_string"
+                                android:inputType="numberDecimal"
+                                style="@style/editTextField"
+                                android:nextFocusDown="@+id/location_height_TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:text="X"
+                              android:gravity="center"
+                              android:fontFamily="@font/font"
+                              android:textSize="20sp"
+                              android:layout_gravity="center"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/location_height_TextInputLayout"
+                            android:layout_weight="2.0"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/location_height_TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/module_height_string"
+                                android:inputType="numberDecimal"
+                                style="@style/editTextField"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                    android:text="Reset"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reset_button" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp" android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toStartOf="@+id/calculate_button"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/font"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/greyColor" app:layout_constraintTop_toBottomOf="@+id/linearLayout3"/>
+            <Button
+                    android:text="Calculate"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calculate_button" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/reset_button" android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/font"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary" app:layout_constraintTop_toBottomOf="@+id/linearLayout3"/>
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+    </FrameLayout>
+</ScrollView>
