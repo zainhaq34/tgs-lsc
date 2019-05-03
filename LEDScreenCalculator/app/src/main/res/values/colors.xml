@@ -9,4 +9,6 @@
 
     <color name="yellowColor">#FFC20E</color>
 
+    <color name="lightGreyColor">#EEEEEE</color>
+    <color name="lightBlueColor">#64B5F6</color>
 </resources>

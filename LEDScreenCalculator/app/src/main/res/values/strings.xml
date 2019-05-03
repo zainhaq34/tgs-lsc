@@ -15,4 +15,10 @@
     <string name="todo3">TODO</string>
     <string name="app_review_string"><u>App Review</u></string>
     <string name = "content_text_view_string">Application is provide Calculate to screen dimension Width and Height, Screen Module point location in Width, Height and number of panels and number of Power Supplies. </string>
+    <string name="name_string">Name</string>
+    <string name="address_string">Address</string>
+    <string name="company_text_string">Company</string>
+    <string name="enter_company_information_string">Enter company information</string>
+    <string name="product_info_string">Enter Module Name and Size</string>
+    <string name="module_string">Module</string>
 </resources>

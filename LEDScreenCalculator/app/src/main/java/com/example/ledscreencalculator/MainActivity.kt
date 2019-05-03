@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
 
+
         setSupportActionBar(toolbar)
         toolbar.setTitleTextColor(Color.WHITE)
 
